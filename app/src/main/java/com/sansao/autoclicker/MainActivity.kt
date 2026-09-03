@@ -7,7 +7,6 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -40,7 +39,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnStartFloating.setOnClickListener {
-            Toast.makeText(this, "Pronto! Na próxima etapa subiremos o painel flutuante.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, FloatingService::class.java)
+            startService(intent)
+            // Minimiza o app para você poder navegar para qualquer tela
+            moveTaskToBack(true)
         }
     }
 
