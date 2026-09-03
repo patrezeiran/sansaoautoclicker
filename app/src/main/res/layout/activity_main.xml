@@ -1,38 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SansãoAutoClicker"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
-
-    <Button
-        android:id="@+id/btnAccessibility"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1. Ativar Acessibilidade"
-        android:layout_marginBottom="12dp" />
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/btnOverlay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="2. Ativar Sobreposição"
-        android:layout_marginBottom="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SansãoAutoClicker"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp" />
 
-    <Button
-        android:id="@+id/btnStartFloating"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Painel Flutuante"
-        android:enabled="false" />
+        <!-- Passo 1: Acessibilidade -->
+        <Button
+            android:id="@+id/btnAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Ativar Acessibilidade" />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O que fazer lá: Toque em 'Apps transferidos por download' (ou 'Apps instalados'), procure por 'SansãoAutoClicker' e ative a chavinha."
+            android:textColor="#757575"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="4dp" />
+
+        <!-- Passo 2: Sobreposição -->
+        <Button
+            android:id="@+id/btnOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Ativar Sobreposição" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O que fazer lá: Procure 'SansãoAutoClicker' na lista de aplicativos e ative a opção 'Permitir sobreposição a outros apps'."
+            android:textColor="#757575"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="32dp"
+            android:paddingHorizontal="4dp" />
+
+        <!-- Passo 3: Iniciar Painel -->
+        <Button
+            android:id="@+id/btnStartFloating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Painel Flutuante"
+            android:enabled="false" />
+
+    </LinearLayout>
+</ScrollView>
