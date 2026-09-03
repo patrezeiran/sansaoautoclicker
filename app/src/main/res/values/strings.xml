@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SansãoAutoClicker</string>
+    <string name="accessibility_service_description">Serviço do SansãoAutoClicker para gravação e automação de toques na tela.</string>
+</resources>
